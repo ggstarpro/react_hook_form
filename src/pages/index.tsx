@@ -1,4 +1,3 @@
-import 'react-datepicker/dist/react-datepicker.css';
 import { NextPage } from 'next';
 import Link from 'next/link';
 
