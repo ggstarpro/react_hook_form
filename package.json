@@ -10,7 +10,8 @@
     "lint": "next lint --dir src",
     "lint:fix": "next lint --dir src --fix",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.0",
