@@ -6,10 +6,11 @@ import * as z from 'zod';
 import { httpClient } from '@/lib/api/apibase';
 
 const schema = z.object({
-  name: z.string().min(1, '名前を入力してください').max(50, '50文字以内で入力してください'),
-  email: z.string().email('正しいメールアドレスを入力してください'),
+  name: z.string().trim().min(1, '名前を入力してください').max(50, '50文字以内で入力してください'),
+  email: z.string().trim().email('正しいメールアドレスを入力してください'),
   password: z
     .string()
+    .trim()
     .min(8, 'パスワードは8文字以上で入力してください')
     .regex(
       /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)(?=.*?[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).+$/,
