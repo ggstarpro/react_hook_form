@@ -18,7 +18,7 @@ const CommonDialog = (props: Props): JSX.Element => {
   } = props;
   return (
     <div
-      className={`fixed top-0 left-0 z-[100] flex h-full w-full items-center justify-center bg-black/30 transition-all duration-200 ${
+      className={`fixed left-0 top-0 z-[100] flex size-full items-center justify-center bg-black/30 transition-all duration-200 ${
         isOpen ? 'visible block opacity-100' : 'invisible opacity-0'
       }`}
       onClick={canCloseOtherClick ? handleClose : undefined}

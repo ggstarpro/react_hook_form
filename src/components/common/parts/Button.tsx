@@ -25,23 +25,23 @@ const Button = (props: ButtonProps): JSX.Element => {
     variant === 'primary'
       ? 'border-primary bg-primary text-white disabled:border-theme-medium disabled:bg-theme-medium'
       : variant === 'secondary'
-      ? 'border-primary bg-white text-primary disabled:border-theme-medium disabled:text-theme-medium'
-      : variant === 'error'
-      ? 'border-error bg-error text-white disabled:border-theme-medium disabled:bg-theme-medium'
-      : variant === 'error-secondary'
-      ? 'border-error bg-white text-error disabled:border-theme-medium disabled:text-theme-medium'
-      : variant === 'text'
-      ? `border-transparent bg-transparent text-primary hover:border-theme-light hover:bg-theme-light disabled:border-transparent disabled:bg-transparent disabled:text-theme-medium ${
-          loading ? '!bg-theme-light' : ''
-        }`
-      : '';
+        ? 'border-primary bg-white text-primary disabled:border-theme-medium disabled:text-theme-medium'
+        : variant === 'error'
+          ? 'border-error bg-error text-white disabled:border-theme-medium disabled:bg-theme-medium'
+          : variant === 'error-secondary'
+            ? 'border-error bg-white text-error disabled:border-theme-medium disabled:text-theme-medium'
+            : variant === 'text'
+              ? `border-transparent bg-transparent text-primary hover:border-theme-light hover:bg-theme-light disabled:border-transparent disabled:bg-transparent disabled:text-theme-medium ${
+                  loading ? '!bg-theme-light' : ''
+                }`
+              : '';
 
   // Component
   return (
     <>
       <button
         {...buttonHTMLAttributes}
-        className={`relative flex items-center justify-center gap-1 rounded-md border py-2 px-4 text-center text-btn transition-all duration-200 ease-linear hover:opacity-70 disabled:opacity-100 ${
+        className={`relative flex items-center justify-center gap-1 rounded-md border px-4 py-2 text-center text-btn transition-all duration-200 ease-linear hover:opacity-70 disabled:opacity-100 ${
           loading ? 'opacity-70 [&>span]:!text-transparent' : ''
         } ${btnColor} ${className}`}
       >
@@ -73,5 +73,5 @@ const ButtonLoading = () => {
 
 // ローディング中に画面をクリックできないようにする
 const LoadingLayer = () => {
-  return <div className="fixed top-0 left-0 z-[999] h-screen w-screen bg-transparent" />;
+  return <div className="fixed left-0 top-0 z-[999] h-screen w-screen bg-transparent" />;
 };
