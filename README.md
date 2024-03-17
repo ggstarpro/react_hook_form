@@ -26,20 +26,15 @@ npm -v
 npm install
 ```
 
-## 3. husky に権限を与える
 
-以下２つのコマンドを実行して husky の実行ファイルに権限を与える
-
-```shell
-chmod a+x .husky/pre-push
-
-chmod a+x .husky/pre-commit
-```
-
-## 4. `npm run dev`
+## 3. `npm run dev`
 
 `npm run dev`でローカルサーバーを立ち上げます。
 
 ```shell
 npm run dev
 ```
+
+
+## 4. 講座で使用したコード
+講座で使用したコードは、`practice`配下のコードになります。
